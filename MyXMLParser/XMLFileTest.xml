@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Students><Student><Adresses><Adress><FlatNumber>1</FlatNumber><DateIn><Day>1</Day><Month>1</Month><Year>1</Year></DateIn><DateOut><Day>1</Day><Month>1</Month><Year>1</Year></DateOut></Adress></Adresses><ID>1</ID><Course>1</Course></Student></Students></Students>/Year>
+					</DateOut>
+				</Adress>
+			</Adresses>
+			<ID>1</ID>
+			<Course>1</Course>
+		</Student>
+	</Students>
+</Students>

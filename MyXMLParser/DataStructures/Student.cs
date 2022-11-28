@@ -1,34 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Serialization;
 
 namespace MyXMLParser.DataStructures
 {
-    struct Student
+    [Serializable()]
+    public struct Student
     {
         public int ID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public string Patronymic { get; set; }
 
         public string Faculty { get; set; }
         public string Department { get; set; }
-        public string Course { get; set; }
-
+        public int Course { get; set; }
+        [XmlArrayItem("Adress", typeof(Adress))]
         public List<Adress> Adresses;
 
-        public Student(int iD, string firstName, string lastName, string patronymic, string faculty, string department, string course, List<Adress> adresses)
+
+        public Student(int iD, string name, string surname, string patronymic, string faculty, string department, int course, List<Adress> adresses)
         {
             ID = iD;
-            FirstName = firstName;
-            LastName = lastName;
+            Name = name;
+            Surname = surname;
             Patronymic = patronymic;
             Faculty = faculty;
             Department = department;
             Course = course;
             Adresses = adresses;
+        }
+
+        public override string ToString()
+        {
+            return ID + " " + Name + " " + Surname + " " + Patronymic + " " + Faculty + " " + Department + " " + Course;
         }
     }
 }

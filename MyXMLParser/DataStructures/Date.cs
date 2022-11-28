@@ -1,6 +1,7 @@
 ﻿namespace MyXMLParser.DataStructures
 {
-    public class Date
+    [Serializable]
+    public struct Date
     {
         public int Day { get; set; }
         public int Month { get; set; }
