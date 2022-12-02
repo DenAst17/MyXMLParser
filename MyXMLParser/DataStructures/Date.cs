@@ -13,5 +13,10 @@
             Month = month;
             Year = year;
         }
+
+        public override string ToString()
+        {
+            return Day + "/" + Month + "/" + Year;
+        }
     }
 }

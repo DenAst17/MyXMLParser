@@ -31,7 +31,12 @@ namespace MyXMLParser.DataStructures
 
         public override string ToString()
         {
-            return ID + " " + Name + " " + Surname + " " + Patronymic + " " + Faculty + " " + Department + " " + Course;
+            string res =  ID + " " + Name + " " + Surname + " " + Patronymic + " " + Faculty + " " + Department + " " + Course + "\n";
+            foreach(Adress adress in Adresses)
+            {
+                res += " " + adress.ToString() + "\n";
+            }
+            return res;
         }
     }
 }

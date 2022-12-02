@@ -21,5 +21,10 @@
             DateIn = dateIn;
             DateOut = dateOut;
         }
+
+        public override string ToString()
+        {
+            return City + " " + Street + " " + HouseNumber + " " + Flour + " " + FlatNumber + " " + DateIn + "\n" + DateOut + "\n";
+        }
     }
 }

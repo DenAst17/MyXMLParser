@@ -27,31 +27,24 @@
 						<Year>2023</Year>
 					</DateOut>
 				</Adress>
+				<Adress>
+					<City>Kyiv</City>
+					<Street>Maks</Street>
+					<HouseNumber>7</HouseNumber>
+					<Flour>11</Flour>
+					<FlatNumber>153</FlatNumber>
+					<DateIn>
+						<Day>1</Day>
+						<Month>1</Month>
+						<Year>2023</Year>
+					</DateIn>
+					<DateOut>
+						<Day>1</Day>
+						<Month>1</Month>
+						<Year>2023</Year>
+					</DateOut>
+				</Adress>
 			</Adresses>
-		</Student>
-		<Student>
-			<ID>2</ID>
-			<Name>Anya</Name>
-			<Surname>Boj</Surname>
-			<Patronymic>P</Patronymic>
-			<Faculty>cyb</Faculty>
-			<Department>inform</Department>
-			<Course>2</Course>
-			<Adresses>
-					<Adress>
-						<FlatNumber>1</FlatNumber>
-						<DateIn>
-							<Day>1</Day>
-							<Month>1</Month>
-							<Year>1</Year>
-						</DateIn>
-						<DateOut>
-							<Day>1</Day>
-							<Month>1</Month>
-							<Year>1</Year>
-						</DateOut>
-					</Adress>
-				</Adresses>
 		</Student>
 	</Students>
 </Students>

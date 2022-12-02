@@ -28,6 +28,11 @@ namespace MyXMLParser
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            selectReader();
+        }
+
+        private void selectReader()
+        {
             if (comboBox1.SelectedIndex != -1)
             {
                 reader = comboBox1.SelectedItem as IReader;
@@ -35,6 +40,11 @@ namespace MyXMLParser
         }
 
         private void selectFile(object sender, EventArgs e)
+        {
+            showFile();
+        }
+
+        private void showFile()
         {
             try
             {
@@ -63,18 +73,19 @@ namespace MyXMLParser
                 {
                     node.Nodes.Add(prop.Name + ": " + prop.GetValue(student, null));
                 }
-                if(student.Adresses!=null)
+                var adressesNode = new TreeNode("Adresses(Count: " + student.Adresses.Count + ")");
+                if (student.Adresses!=null)
                 {
-                    var adressNode = new TreeNode("Adresses(Count: " + student.Adresses.Count + ")");
                     foreach (var adress in student.Adresses)
                     {
+                        var adressNode = new TreeNode("Adress");
                         foreach (var prop in adress.GetType().GetProperties())
                         {
                             adressNode.Nodes.Add(prop.Name + ": " + prop.GetValue(adress, null));
                         }
-                        node.Nodes.Add(adressNode);
+                        adressesNode.Nodes.Add(adressNode);
                     }
-                    
+                    node.Nodes.Add(adressesNode);
                 }
                 
                 node.Tag = student;
