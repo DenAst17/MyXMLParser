@@ -10,13 +10,6 @@ namespace MyXMLParser.Readers
         {
             var representation = new XMLRepresentation(@"D:\Projects\C#\MyXMLParser\MyXMLParser\");
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(XMLRepresentation));
-            using (FileStream fs = new FileStream(@"D:\Projects\C#\MyXMLParser\MyXMLParser\XMLFileTest.xml", FileMode.OpenOrCreate))
-            {
-                var a = new List<Adress>();
-                a.Add(new Adress(null,null,null,null,1,new Date(1, 1, 1),new Date(1, 1, 1)));
-                representation.Students.Add(new Student(1, null, null, null, null, null, 1, a));
-                xmlSerializer.Serialize(fs, representation);
-            }
             using (FileStream fs = new FileStream(@"D:\Projects\C#\MyXMLParser\MyXMLParser\XMLFile1.xml", FileMode.OpenOrCreate))
             {
                 representation = (XMLRepresentation)xmlSerializer.Deserialize(fs);

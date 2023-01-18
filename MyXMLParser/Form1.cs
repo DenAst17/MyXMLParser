@@ -3,14 +3,14 @@ using MyXMLParser.Readers;
 
 namespace MyXMLParser
 {
-    public partial class Form1 : Form
+    public partial class MyXmlParse : Form
     {
         public List<IReader> XMLReaders = new List<IReader>();
         private IReader reader;
         private string filePath;
 
 
-        public Form1()
+        public MyXmlParse()
         {
             InitializeComponent();
 
@@ -111,6 +111,18 @@ namespace MyXMLParser
                 }
                 if (openFileDialog.FileName == "") throw new Exception("Incorect Name");
             }
+        }
+
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAboutForm();
+        }
+
+        private void ShowAboutForm()
+        {
+            var f = new AboutForm();
+            f.Show();
         }
     }
 }

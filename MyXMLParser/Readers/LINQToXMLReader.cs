@@ -14,7 +14,7 @@ namespace MyXMLParser.Readers
             var list = xdoc.XPathSelectElements("//Students//Students//Student");
             foreach (XElement el in list)
             {
-                createStudent(el);
+                rep.Students.Add(createStudent(el));
             }
 
             return rep;
@@ -31,7 +31,8 @@ namespace MyXMLParser.Readers
             student.Faculty = StudentEl.Element("Faculty").Value;
             student.Course = Int32.Parse(StudentEl.Element("Course").Value);
             student.Patronymic = StudentEl.Element("Patronymic").Value;
-            student.Adresses = getAdresses(StudentEl.Element("Adresses"));
+            //student.Adresses = getAdresses(StudentEl.Element("Adresses"));
+            student.Adresses = new List<Adress>();
             return student;
         }
 
