@@ -1,5 +1,6 @@
 using MyXMLParser.DataStructures;
 using MyXMLParser.Readers;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyXMLParser
 {
@@ -49,6 +50,7 @@ namespace MyXMLParser
             try
             {
                 filePath = OpenDialog();
+                richTextBox1.Text = filePath;
                 if (filePath == "") return;
                 var rep = reader.ReadFile(filePath);
 

@@ -3,6 +3,51 @@
 	<Students>
 		<Student>
 			<ID>1</ID>
+			<Name>Timofei</Name>
+			<Surname>Tkachenko</Surname>
+			<Patronymic>P</Patronymic>
+			<Faculty>cyb</Faculty>
+			<Department>inform</Department>
+			<Course>2</Course>
+			<Adresses>
+				<Adress>
+					<City>Kyiv</City>
+					<Street>Maks</Street>
+					<HouseNumber>7</HouseNumber>
+					<Flour>11</Flour>
+					<FlatNumber>153</FlatNumber>
+					<DateIn>
+						<Day>1</Day>
+						<Month>1</Month>
+						<Year>2023</Year>
+					</DateIn>
+					<DateOut>
+						<Day>1</Day>
+						<Month>1</Month>
+						<Year>2023</Year>
+					</DateOut>
+				</Adress>
+				<Adress>
+					<City>Kyiv</City>
+					<Street>Maks</Street>
+					<HouseNumber>7</HouseNumber>
+					<Flour>11</Flour>
+					<FlatNumber>153</FlatNumber>
+					<DateIn>
+						<Day>1</Day>
+						<Month>1</Month>
+						<Year>2023</Year>
+					</DateIn>
+					<DateOut>
+						<Day>1</Day>
+						<Month>1</Month>
+						<Year>2023</Year>
+					</DateOut>
+				</Adress>
+			</Adresses>
+		</Student>
+		<Student>
+			<ID>1</ID>
 			<Name>Ivan</Name>
 			<Surname>Boj</Surname>
 			<Patronymic>P</Patronymic>

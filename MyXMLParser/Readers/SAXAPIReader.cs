@@ -8,9 +8,9 @@ namespace MyXMLParser.Readers
     {
         public XMLRepresentation ReadFile(string filePath)
         {
-            var representation = new XMLRepresentation(@"D:\Projects\C#\MyXMLParser\MyXMLParser\");
+            var representation = new XMLRepresentation(filePath);
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(XMLRepresentation));
-            using (FileStream fs = new FileStream(@"D:\Projects\C#\MyXMLParser\MyXMLParser\XMLFile1.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate))
             {
                 representation = (XMLRepresentation)xmlSerializer.Deserialize(fs);
             }
